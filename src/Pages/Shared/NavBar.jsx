@@ -1,23 +1,41 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 
 const NavBar = () => {
 
+    const { user, logOut } = useAuth();
+
+    const handleLogOUt = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
     const navOptions = <>
-        <li className="font-medium text-lg tracking-wider text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Home</NavLink></li>
+        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Home</NavLink></li>
 
-        <li className="font-medium text-lg tracking-wider text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>All Toys</NavLink></li>
+        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>All Toys</NavLink></li>
 
-        <li className="font-medium text-lg tracking-wider text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>My Toys</NavLink></li>
+        {
+            user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>My Toys</NavLink></li>
+        }
 
-        <li className="font-medium text-lg tracking-wider text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Add A Toy</NavLink></li>
+        {
+            user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Add A Toy</NavLink></li>
 
-        <li className="font-medium text-lg tracking-wider text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Blogs</NavLink></li>
-        
+        }
+
+        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Blogs</NavLink></li>
+
     </>;
 
     return (
-        <div className="navbar bg-1 font-Poppins">
+        <div className="navbar bg-1">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,28 +57,31 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-16 rounded-full">
-                            <img src="im" className="object-cover object-center" />
+            {
+                    user?.email ? <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-16 rounded-full">
+                                <img src={user?.photoURL} className="object-cover object-center" />
 
-                        </div>
+                            </div>
 
-                    </label>
-                    <ul tabIndex={0} className="mt-3 p-4 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <li className="hidden">
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
-                        <li className="hidden"><a>Settings</a></li>
-                        <li>displayName <br /> email</li>
-                        <div className="divider pt-0"></div>
-                        <button className="btn btn-sm">Logout</button>
-                    </ul>
-                </div>
-                <a className="btn">LogIn</a>
+                        </label>
+                        <ul tabIndex={0} className="mt-3 p-4 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                            <li className="hidden">
+                                <a className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </a>
+                            </li>
+                            <li className="hidden"><a>Settings</a></li>
+                            <li>{user?.displayName} <br /> {user.email}</li>
+                            <div className="divider pt-0"></div>
+                            <button onClick={handleLogOUt} className="btn btn-sm">Logout</button>
+                        </ul>
+                    </div>
+                        : <Link to='login' className="btn">LogIn</Link>
+                }
+
             </div>
         </div>
 
