@@ -45,9 +45,9 @@ const MyToys = () => {
     return (
         <>
         <Helmet>
-            <title>ToyVerse | MyToys</title>
+            <title>ToyVerse | My Toys</title>
         </Helmet>
-            <div className="overflow-x-auto pt-20 my-container">
+            <div className="overflow-x-auto pt-28 my-container">
                 <table className="table table-zebra">
                     {/* head */}
                     <thead>

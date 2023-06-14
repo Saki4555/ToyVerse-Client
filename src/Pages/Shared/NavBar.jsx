@@ -32,7 +32,7 @@ const NavBar = () => {
     const navOptions = <>
         <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Home</NavLink></li>
 
-        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>All Toys</NavLink></li>
+        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/alltoys' className={({ isActive }) => (isActive ? 'nav-text' : '')}>All Toys</NavLink></li>
 
         {
             user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/mytoys' className={({ isActive }) => (isActive ? 'nav-text' : '')}>My Toys</NavLink></li>
@@ -48,7 +48,7 @@ const NavBar = () => {
     </>;
 
     return (
-        <div className={`navbar bg-1 fixed z-10 ${isScrolled ? "opacity-50" : ""}`}>
+        <div className={`navbar bg-1 px-5 fixed z-10 ${isScrolled ? "opacity-50" : ""}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
