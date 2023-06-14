@@ -45,7 +45,7 @@ const Login = () => {
             <Helmet>
                 <title>ToyVerse | Login</title>
             </Helmet>
-            <div className="pt-10 pb-10">
+            <div className="pt-28 pb-10">
                 <div className="w-full px-2 lg:p-0 lg:w-96 mx-auto border-4 rounded-lg">
                     <form onSubmit={handleSubmit(onSubmit)} className="bg-white bg-opacity-75 shadow-lg">
                         <SocialLogin></SocialLogin>

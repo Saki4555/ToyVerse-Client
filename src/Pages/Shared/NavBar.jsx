@@ -1,10 +1,23 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import { useEffect, useState } from "react";
 
 
 const NavBar = () => {
-
+    const [isScrolled, setIsScrolled] = useState(false);
     const { user, logOut } = useAuth();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset;
+            setIsScrolled(scrollTop > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const handleLogOUt = () => {
         logOut()
@@ -35,7 +48,7 @@ const NavBar = () => {
     </>;
 
     return (
-        <div className="navbar bg-1">
+        <div className={`navbar bg-1 fixed z-10 ${isScrolled ? "opacity-50" : ""}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
