@@ -1,61 +1,70 @@
-
+import galleryimg1 from '../../../assets/Gallery/g-1.jpg';
+import galleryimg2 from '../../../assets/Gallery/g-2.jpg';
+import galleryimg3 from '../../../assets/Gallery/g-3.jpg';
+import galleryimg4 from '../../../assets/Gallery/g-4.jpg';
+import galleryimg5 from '../../../assets/Gallery/g-5.jpg';
+import galleryimg7 from '../../../assets/Gallery/g-7.jpg';
+import galleryimg8 from '../../../assets/Gallery/g-8.jpg';
+import galleryimg9 from '../../../assets/Gallery/g-9.jpg';
+import galleryimg10 from '../../../assets/Gallery/g-10.jpg';
+import galleryimg11 from '../../../assets/Gallery/g-11.jpg';
+import galleryimg12 from '../../../assets/Gallery/g-12.jpg';
 
 const Gallery = () => {
     return (
-        <>
-            <div className="pt-20 pb-14 text-center text-gray-700">
-                <h1 className="text-4xl font-bold pb-4">Toys Gallery</h1>
-                <h4>sub tile to do</h4>
-            </div>
+            <div className="my-container">
+                <div className="pt-20 pb-14 text-center text-gray-600">
+                    <h1 className="text-4xl font-bold pb-4">Toys Gallery</h1>
+                    <h4>Unleash Your Imagination in the Toy Galler</h4>
+                </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="grid gap-4">
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt=""/>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="grid gap-4">
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg1} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg2} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg3} alt="" />
+                        </div>
                     </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt=""/>
+                    <div className="grid gap-4">
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg4} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg5} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg12} alt="" />
+                        </div>
                     </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt=""/>
+                    <div className="grid gap-4">
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg7} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg8} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg8} alt="" />
+                        </div>
                     </div>
-                </div>
-                <div className="grid gap-4">
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt=""/>
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt=""/>
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt=""/>
-                    </div>
-                </div>
-                <div className="grid gap-4">
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt=""/>
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt=""/>
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt=""/>
-                    </div>
-                </div>
-                <div className="grid gap-4">
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt=""/>
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt=""/>
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt=""/>
+                    <div className="grid gap-4">
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg9} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg10} alt="" />
+                        </div>
+                        <div>
+                            <img className="h-auto max-w-full rounded-lg" src={galleryimg11} alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </>
     );
 };
 
