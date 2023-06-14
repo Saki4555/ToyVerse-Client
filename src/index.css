@@ -9,7 +9,9 @@
 .bg-2{
     @apply bg-[#FDEA45]
 }
-
+.text-1{
+    @apply text-[#B92D5E]
+}
 .nav-text{
     @apply text-[#FDEA45]
 }

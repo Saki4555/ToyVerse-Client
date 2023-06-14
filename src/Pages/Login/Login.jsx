@@ -26,7 +26,7 @@ const Login = () => {
                 toast.success('Logged in successfully', {
                     duration: 1500,
                     style: {
-                        background: '#E3F4F4',
+                        background: '#F8E8EE',
                         fontWeight: '700'
                     },
                 });
@@ -45,7 +45,7 @@ const Login = () => {
             <Helmet>
                 <title>ToyVerse | Login</title>
             </Helmet>
-            <div className="pt-20 pb-10">
+            <div className="pt-10 pb-10">
                 <div className="w-full px-2 lg:p-0 lg:w-96 mx-auto border-4 rounded-lg">
                     <form onSubmit={handleSubmit(onSubmit)} className="bg-white bg-opacity-75 shadow-lg">
                         <SocialLogin></SocialLogin>
@@ -83,7 +83,7 @@ const Login = () => {
                             <div className="flex items-center justify-between">
                                 <button
 
-                                    className="bg-[#88d5d0] hover:bg-[#b9dbdb] text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    className="bg-1 text-white hover:bg-[#bc567a] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                     type="submit"
                                 >
                                     Sign In
@@ -93,7 +93,7 @@ const Login = () => {
                         {
                             error && <p className="ml-8 pb-1 pt-2 text-red-500 font-semibold">{error}</p>
                         }
-                        <p className="ml-8 pb-7 pt-2">New Here? <Link to='/signup'><span className="text-yellow-600 hover:text-blue-950">Create an LiguaLodge account</span></Link></p>
+                        <p className="ml-8 pb-7 pt-2">New Here? <Link to='/signup'><span className="text-1 hover:text-blue-500">Create an ToyVerse account</span></Link></p>
                     </form>
 
                 </div>

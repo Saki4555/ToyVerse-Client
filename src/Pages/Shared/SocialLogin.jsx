@@ -18,7 +18,7 @@ const SocialLogin = () => {
                 toast.success('Singed up successfully', {
                     duration: 3000,
                     style: {
-                        background: '#E3F4F4',
+                        background: '#F8E8EE',
                         fontWeight: '700'
                     },
                 });

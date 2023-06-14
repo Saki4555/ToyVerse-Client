@@ -60,8 +60,8 @@ const NavBar = () => {
             {
                     user?.email ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-16 rounded-full">
-                                <img src={user?.photoURL} className="object-cover object-center" />
+                            <div className="w-16 rounded-full" title={user.displayName}>
+                                <img src={user?.photoURL} className="object-cover object-center"/>
 
                             </div>
 
