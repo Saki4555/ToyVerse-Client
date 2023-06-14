@@ -21,7 +21,7 @@ const Gallery = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="grid gap-4">
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src={galleryimg1} alt="" />
+                            <img className="h-[325px] max-w-full rounded-lg" src={galleryimg1} alt="" />
                         </div>
                         <div>
                             <img className="h-auto max-w-full rounded-lg" src={galleryimg2} alt="" />
@@ -35,7 +35,7 @@ const Gallery = () => {
                             <img className="h-auto max-w-full rounded-lg" src={galleryimg4} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src={galleryimg5} alt="" />
+                            <img className="h-[325px] max-w-full rounded-lg" src={galleryimg5} alt="" />
                         </div>
                         <div>
                             <img className="h-auto max-w-full rounded-lg" src={galleryimg12} alt="" />
@@ -43,7 +43,7 @@ const Gallery = () => {
                     </div>
                     <div className="grid gap-4">
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src={galleryimg7} alt="" />
+                            <img className="h-[325px] max-w-full rounded-lg" src={galleryimg7} alt="" />
                         </div>
                         <div>
                             <img className="h-auto max-w-full rounded-lg" src={galleryimg8} alt="" />
@@ -57,7 +57,7 @@ const Gallery = () => {
                             <img className="h-auto max-w-full rounded-lg" src={galleryimg9} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src={galleryimg10} alt="" />
+                            <img className="h-[325px] max-w-full rounded-lg" src={galleryimg10} alt="" />
                         </div>
                         <div>
                             <img className="h-auto max-w-full rounded-lg" src={galleryimg11} alt="" />

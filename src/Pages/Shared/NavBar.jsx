@@ -35,11 +35,11 @@ const NavBar = () => {
         <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>All Toys</NavLink></li>
 
         {
-            user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>My Toys</NavLink></li>
+            user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/mytoys' className={({ isActive }) => (isActive ? 'nav-text' : '')}>My Toys</NavLink></li>
         }
 
         {
-            user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Add A Toy</NavLink></li>
+            user && <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/addtoy' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Add A Toy</NavLink></li>
 
         }
 
