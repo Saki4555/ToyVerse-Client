@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const UpdateToys = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const toy = useLoaderData();
+    const navigate = useNavigate();
     // console.log(toy.price);
 
 
@@ -33,6 +34,7 @@ const UpdateToys = () => {
                         fontWeight: '700'
                     },
                 });
+                navigate('/mytoys');
             }
         })
        
@@ -41,7 +43,7 @@ const UpdateToys = () => {
 
 
     return (
-        <div className="px-8 pt-28 font-Poppins my-container bg-pink-50">
+        <div className="px-8 pt-28 font-Poppins my-container bg-pink-50 pb-16">
             <div className="border-4 rounded-lg">
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-white bg-opacity-75 shadow-lg">
 

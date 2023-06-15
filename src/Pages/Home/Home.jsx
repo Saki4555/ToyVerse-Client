@@ -2,6 +2,9 @@ import { Helmet } from "react-helmet-async";
 import Gallery from "./Gallery/Gallery";
 import HomeBanner from "./HomeBanner/HomeBanner";
 import ShopByCategory from "./ShopByCateroy/ShopByCategory";
+import TopProducts from "./ExtraSection/TopProducts";
+import Feedback from "./ExtraSection/Feedback";
+
 
 const Home = () => {
     return (
@@ -12,6 +15,8 @@ const Home = () => {
         <HomeBanner></HomeBanner>
         <Gallery></Gallery>
         <ShopByCategory></ShopByCategory>
+        <Feedback></Feedback>
+        <TopProducts></TopProducts>
         </>
     );
 };

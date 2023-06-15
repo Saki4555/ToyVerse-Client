@@ -1,10 +1,20 @@
 import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const ToyCard = ({ item }) => {
+
+    useEffect(() => {
+        AOS.init({duration: 800});
+
+        return () => {
+            AOS.refresh();
+          };
+      }, [])
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card w-full md:w-96 bg-base-100 shadow-xl">
             <figure><img src={item.image} alt="toys" /></figure>
             <div className="card-body">
                 <h2 className="card-title">

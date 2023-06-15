@@ -10,7 +10,7 @@ import useAuth from "../../Hooks/useAuth";
 const MyToys = () => {
     const [userToys, setUserToys] = useState([]);
     const [sortOption, setSortOption] = useState('Ascending');
-
+    const [control, setControl] = useState(false);
    const { user } = useAuth();
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const MyToys = () => {
             console.log(data);
             setUserToys(data);
           });
-      }, [sortOption, user?.email]);
+      }, [sortOption, user?.email, control]);
 
 
 
@@ -49,7 +49,7 @@ const MyToys = () => {
                     .then(data => {
                         if (data.deletedCount) {
                             // refetch()
-
+                            setControl(!control);
                             toast.success('Deleted successfully', {
                                 duration: 1500,
                                 style: {
@@ -68,7 +68,7 @@ const MyToys = () => {
             <Helmet>
                 <title>ToyVerse | My Toys</title>
             </Helmet>
-            <div className="pt-24 text-end my-container">
+            <div className="pt-28 text-end my-container">
                 <select defaultValue="Sort" onChange={handleSortChange}  className="select select-secondary w-full max-w-xs">
                     <option disabled value="Sort">Sort</option>
                     <option>Ascending</option>
@@ -76,7 +76,7 @@ const MyToys = () => {
                     
                 </select>
             </div>
-            <div className="overflow-x-auto pt-10 my-container">
+            <div className="overflow-x-auto pt-10 my-container pb-20">
                 <table className="table table-zebra">
                     {/* head */}
                     <thead>

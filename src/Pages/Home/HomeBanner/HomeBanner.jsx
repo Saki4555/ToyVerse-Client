@@ -8,8 +8,8 @@ import { Autoplay, Pagination, Navigation } from 'swiper';
 import HomeSlider from './Homeslider';
 
 import slide1 from '../../../assets/Home/banner-1.png'
-import slide2 from '../../../assets/Home/banner-3.png'
-import slide4 from '../../../assets/Home/banner-4.png'
+import slide2 from '../../../assets/Gallery/g-6.jpg'
+import slide4 from '../../../assets/Gallery/g-1.jpg'
 
 const HomeBanner = () => {
     return (
