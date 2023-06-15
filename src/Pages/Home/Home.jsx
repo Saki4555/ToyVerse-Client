@@ -15,8 +15,8 @@ const Home = () => {
         <HomeBanner></HomeBanner>
         <Gallery></Gallery>
         <ShopByCategory></ShopByCategory>
-        <Feedback></Feedback>
         <TopProducts></TopProducts>
+        <Feedback></Feedback>
         </>
     );
 };
