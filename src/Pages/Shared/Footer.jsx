@@ -1,12 +1,12 @@
-import logo from '../../assets/Home/logo.png';
+import logo from '../../assets/Home//logo.png';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-base-300 text-base-content">
+        <footer className="footer footer-center p-10 bg-neutral text-neutral-content">
         <div>
-          <img src={logo} alt="" />
+          <img src={logo} className='w-20 h-20' alt="" />
           <p className="font-bold">
-            ACME Industries Ltd. <br/>Providing reliable tech since 1992
+            ToyVerse Private Ltd. <br/>Providing reliable tech since 1992
           </p> 
           <p>Copyright © 2023 - All right reserved</p>
         </div> 
