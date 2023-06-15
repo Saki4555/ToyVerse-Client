@@ -1,16 +1,52 @@
 import { Helmet } from "react-helmet-async";
-import useAllToys from "../../Hooks/useAllToys";
+
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
+
 
 const AllToys = () => {
-    const [toys] = useAllToys();
-    console.log(toys);
+    // const [toys] = useAllToys();
+    const [alltoys, setAllToys] = useState([]);
+    const [searchText, setSearchText] = useState("");
+    // console.log(toys);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/alltoys')
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setAllToys(data);
+            })
+    }, [])
+
+    const handleSearch = () => {
+        fetch(`http://localhost:5000/getToysByText/${searchText}`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setAllToys(data);
+            });
+    };
+
+
     return (
         <>
             <Helmet>
                 <title>ToyVerse | All Toys</title>
             </Helmet>
-            <div className="overflow-x-auto pt-28 my-container">
+            <div className="pt-28 flex items-center justify-center gap-5">
+                <input onChange={(e) => setSearchText(e.target.value)}
+                    type="text" placeholder="Type here" className="input input-bordered input-secondary w-full max-w-xs" />
+               
+                <button onClick={handleSearch}
+                    className="bg-1 hover:bg-[#c05077] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit"
+                >
+                    Search
+                </button>
+            </div>
+            <div className="overflow-x-auto pt-10 my-container">
                 <table className="table table-zebra">
                     {/* head */}
                     <thead>
@@ -28,7 +64,7 @@ const AllToys = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {toys.map((toy, index) => <tr
+                        {alltoys.map((toy, index) => <tr
                             key={toy._id}
                         >
                             <th>

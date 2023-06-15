@@ -8,10 +8,11 @@ const useAllToys = () => {
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/alltoys');
             return res.json();
-        }
+        },
+      
     });
 
-    return [toys, loading, refetch];
+return [toys, loading, refetch];
 };
 
 export default useAllToys;
