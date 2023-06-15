@@ -1,13 +1,34 @@
 import { Link } from "react-router-dom";
-import useMyToys from "../../Hooks/useMyToys";
 import { FaTrashAlt } from 'react-icons/fa';
 import { Helmet } from "react-helmet-async";
 import { toast } from "react-hot-toast";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
+import useAuth from "../../Hooks/useAuth";
+
 
 const MyToys = () => {
-    const [userToys, , refetch] = useMyToys();
-    // console.log(userToys);
+    const [userToys, setUserToys] = useState([]);
+    const [sortOption, setSortOption] = useState('Ascending');
+
+   const { user } = useAuth();
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/mytoys/${user?.email}?toSort=${sortOption}`)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setUserToys(data);
+          });
+      }, [sortOption, user?.email]);
+
+
+
+    const handleSortChange = (event) => {
+        const selectedOption = event.target.value;
+        setSortOption(selectedOption);
+        
+      };
 
     const handleDelete = toy => {
         Swal.fire({
@@ -27,7 +48,7 @@ const MyToys = () => {
                     .then(res => res.json())
                     .then(data => {
                         if (data.deletedCount) {
-                            refetch()
+                            // refetch()
 
                             toast.success('Deleted successfully', {
                                 duration: 1500,
@@ -44,10 +65,18 @@ const MyToys = () => {
 
     return (
         <>
-        <Helmet>
-            <title>ToyVerse | My Toys</title>
-        </Helmet>
-            <div className="overflow-x-auto pt-28 my-container">
+            <Helmet>
+                <title>ToyVerse | My Toys</title>
+            </Helmet>
+            <div className="pt-24 text-end my-container">
+                <select defaultValue="Sort" onChange={handleSortChange}  className="select select-secondary w-full max-w-xs">
+                    <option disabled value="Sort">Sort</option>
+                    <option>Ascending</option>
+                    <option>Descending</option>
+                    
+                </select>
+            </div>
+            <div className="overflow-x-auto pt-10 my-container">
                 <table className="table table-zebra">
                     {/* head */}
                     <thead>

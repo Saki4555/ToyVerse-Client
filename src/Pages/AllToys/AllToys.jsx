@@ -9,6 +9,7 @@ const AllToys = () => {
     // const [toys] = useAllToys();
     const [alltoys, setAllToys] = useState([]);
     const [searchText, setSearchText] = useState("");
+   
     // console.log(toys);
 
     useEffect(() => {
@@ -21,6 +22,9 @@ const AllToys = () => {
     }, [])
 
     const handleSearch = () => {
+        if(!searchText){
+            return;
+        }
         fetch(`http://localhost:5000/getToysByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
@@ -36,9 +40,11 @@ const AllToys = () => {
                 <title>ToyVerse | All Toys</title>
             </Helmet>
             <div className="pt-28 flex items-center justify-center gap-5">
-                <input onChange={(e) => setSearchText(e.target.value)}
-                    type="text" placeholder="Type here" className="input input-bordered input-secondary w-full max-w-xs" />
-               
+               <div>
+               <input onChange={(e) => setSearchText(e.target.value)}
+                    type="text" placeholder="Type here" className="input input-bordered input-secondary w-full max-w-xs pb-2" />
+             
+               </div>
                 <button onClick={handleSearch}
                     className="bg-1 hover:bg-[#c05077] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit"

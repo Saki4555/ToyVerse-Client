@@ -10,7 +10,7 @@ const AddToys = () => {
     const onSubmit = data => {
         console.log(data);
         const { name, image, price, quantity, rating, details, category} =data;
-        const newToy = { name, image, price, quantity, rating, category, details, seller_name: user?.displayName, seller_email: user?.email };
+        const newToy = { name, image, price: parseInt(price), quantity, rating: parseInt(rating), category, details, seller_name: user?.displayName, seller_email: user?.email };
         console.log(newToy);
 
         fetch('http://localhost:5000/toys/', {
