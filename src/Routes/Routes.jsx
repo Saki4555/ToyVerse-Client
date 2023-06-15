@@ -11,6 +11,7 @@ import UpdateToys from "../Pages/MyToys/UpdateToys";
 import AllToys from "../Pages/AllToys/AllToys";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import PrivateRoute from "./PrivateRoute";
+import Blogs from "../Pages/Blogs/Blogs";
 
 
 
@@ -52,6 +53,10 @@ import PrivateRoute from "./PrivateRoute";
           path: '/toydetails/:id',
           element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
           loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+        },
+        {
+          path: '/blogs',
+          element: <Blogs></Blogs>
         }
       ]
     },

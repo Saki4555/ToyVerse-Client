@@ -43,7 +43,7 @@ const NavBar = () => {
 
         }
 
-        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Blogs</NavLink></li>
+        <li className="font-medium text-lg tracking-wider lg:text-white"><NavLink to='/blogs' className={({ isActive }) => (isActive ? 'nav-text' : '')}>Blogs</NavLink></li>
 
     </>;
 
