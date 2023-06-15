@@ -12,6 +12,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import PrivateRoute from "./PrivateRoute";
 import Blogs from "../Pages/Blogs/Blogs";
+import ErrorElement from "../Pages/ErrorElement";
 
 
 
@@ -19,6 +20,7 @@ import Blogs from "../Pages/Blogs/Blogs";
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorElement></ErrorElement>,
       children: [
         {
           path: '/',
