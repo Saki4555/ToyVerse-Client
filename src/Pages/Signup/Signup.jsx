@@ -21,7 +21,7 @@ const Signup = () => {
                 updateUserProfile(data.name, data.PhotoUrl)
                     .then(() => {
                         reset();
-                        toast.success('Logged in successfully', {
+                        toast.success('Signed in successfully', {
                             duration: 1500,
                             style: {
                                 background: '#F8E8EE',

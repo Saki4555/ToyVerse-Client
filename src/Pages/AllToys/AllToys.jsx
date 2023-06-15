@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import useAllToys from "../../Hooks/useAllToys";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
     const [toys] = useAllToys();
@@ -23,7 +24,7 @@ const AllToys = () => {
                             <th>Sub-category</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>View Details</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -63,17 +64,25 @@ const AllToys = () => {
                                     toy.price
                                 }
                             </td>
-                            <td>                               
+                            <td>
                                 {
                                     toy.quantity
                                 }
                             </td>
 
                             <td>
-                               k
+                                <Link to='/toydetails'>
+                                    <button
+                                        className="bg-1 hover:bg-[#c05077] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                        type="submit"
+                                    >
+                                        View Details
+                                    </button>
+                                </Link>
+
                             </td>
-                          
-                            
+
+
                         </tr>)}
 
                     </tbody>

@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useEffect, useState } from "react";
 
@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const NavBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const { user, logOut } = useAuth();
-
+    const navigate = useNavigate();
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
@@ -22,7 +22,7 @@ const NavBar = () => {
     const handleLogOUt = () => {
         logOut()
             .then(() => {
-
+                navigate('/');
             })
             .catch(error => {
                 console.log(error.message);
@@ -70,11 +70,11 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            {
+                {
                     user?.email ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-16 rounded-full" title={user.displayName}>
-                                <img src={user?.photoURL} className="object-cover object-center"/>
+                                <img src={user?.photoURL} className="object-cover object-center" />
 
                             </div>
 
