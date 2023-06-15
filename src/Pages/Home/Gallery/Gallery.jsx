@@ -12,7 +12,7 @@ import galleryimg12 from '../../../assets/Gallery/g-12.jpg';
 
 const Gallery = () => {
     return (
-            <div className="my-container">
+            <div className="my-container pb-20">
                 <div className="pt-20 pb-14 text-center text-gray-600">
                     <h1 className="text-4xl font-bold pb-4">Toys Gallery</h1>
                     <h4>Unleash Your Imagination in the Toy Galler</h4>

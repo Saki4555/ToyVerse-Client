@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useEffect, useState } from "react";
-
+import logo from '../../assets/Home/logo.png';
 
 const NavBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -60,6 +60,7 @@ const NavBar = () => {
                         }
                     </ul>
                 </div>
+                <img src={logo} className="w-20 h-14 object-center object-fill rounded" alt="" />
                 <Link to='/' className="btn btn-ghost normal-case text-sm lg:text-2xl text-white">ToyVerse</Link>
             </div>
             <div className="navbar-center hidden lg:flex">

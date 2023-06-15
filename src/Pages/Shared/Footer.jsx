@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-neutral text-neutral-content">
         <div>
-          <img src={logo} className='w-20 h-20' alt="" />
+          <img src={logo} className='w-20 h-20 rounded' alt="" />
           <p className="font-bold">
             ToyVerse Private Ltd. <br/>Providing reliable tech since 1992
           </p> 

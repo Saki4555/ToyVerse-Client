@@ -49,8 +49,9 @@ import PrivateRoute from "./PrivateRoute";
           element: <AllToys></AllToys>
         },
         {
-          path: '/toydetails',
-          element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>
+          path: '/toydetails/:id',
+          element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+          loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
         }
       ]
     },
