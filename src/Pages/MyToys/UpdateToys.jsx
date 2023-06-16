@@ -15,7 +15,7 @@ const UpdateToys = () => {
         const { price, quantity, details} = data;
         const updatedToy = {price, quantity, details};
 
-        fetch(`http://localhost:5000/toys/${toy._id}`, {
+        fetch(`https://assignment-11-server-iota-five.vercel.app/toys/${toy._id}`, {
             method: "PATCH",
             headers:{
                 'content-type' : 'application/json'

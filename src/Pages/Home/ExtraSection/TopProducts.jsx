@@ -21,7 +21,7 @@ const TopProducts = () => {
     return (
         <div className='my-container md:flex gap-10 mt-28 mb-20'>
             <div data-aos="fade-right" className='w-full md:w-1/2'>
-                <h1 className='text-3xl font-bold mb-10 pb-4 border-b border-l-8 pl-5 border-l-[#B92D5E]'>Best Rated Products</h1>
+                <h1 className='text-xl lg:text-3xl font-bold mb-10 pb-4 border-b border-l-8 pl-5 border-l-[#B92D5E]'>Best Rated Products</h1>
                 <div className='flex items-center gap-10 mb-5'>
                     <img src={img1} className='w-28 h-28 rounded-lg object-cover object-center' alt="toys" />
                     <div>
@@ -71,7 +71,7 @@ const TopProducts = () => {
 
             <div  data-aos="fade-left" className='w-full md:w-1/2'>
 
-                <h1 className='text-3xl font-bold mb-10 pb-4 border-b border-l-8 pl-5 border-l-[#B92D5E]'>New Products</h1>
+                <h1 className='text-xl lg:text-3xl font-bold mb-10 pb-4 border-b border-l-8 pl-5 border-l-[#B92D5E]'>New Products</h1>
                 <div className='flex items-center gap-10 mb-5'>
                     <img src={img5} className='w-28 h-28 rounded-lg object-cover object-center' alt="toys" />
                     <div>

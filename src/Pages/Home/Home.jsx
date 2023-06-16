@@ -12,11 +12,13 @@ const Home = () => {
         <Helmet>
             <title>ToyVerse | Home</title>
         </Helmet>
+      
         <HomeBanner></HomeBanner>
         <Gallery></Gallery>
         <ShopByCategory></ShopByCategory>
         <TopProducts></TopProducts>
         <Feedback></Feedback>
+
         </>
     );
 };

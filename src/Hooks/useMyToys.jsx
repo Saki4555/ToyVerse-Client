@@ -7,7 +7,7 @@ const useMyToys = () => {
     const { data: userToys = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['mytoys', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/mytoys/${user?.email}`);
+            const res = await fetch(`https://assignment-11-server-iota-five.vercel.app/mytoys/${user?.email}`);
             return res.json();
         }
     });

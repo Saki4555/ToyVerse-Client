@@ -13,7 +13,7 @@ const AllToys = () => {
     // console.log(toys);
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch('https://assignment-11-server-iota-five.vercel.app/alltoys')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -25,7 +25,7 @@ const AllToys = () => {
         if(!searchText){
             return;
         }
-        fetch(`http://localhost:5000/getToysByText/${searchText}`)
+        fetch(`https://assignment-11-server-iota-five.vercel.app/getToysByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -52,7 +52,7 @@ const AllToys = () => {
                     Search
                 </button>
             </div>
-            <div className="overflow-x-auto pt-10 my-container">
+            <div className="overflow-x-auto pt-10 my-container mb-20">
                 <table className="table table-zebra">
                     {/* head */}
                     <thead>

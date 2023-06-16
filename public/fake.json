@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Speed Racer",
+        "image": "https://i.ibb.co/hDh3H1Z/g-5.jpg",
+        "price": 42,
+        "quantity": "500",
+        "rating": 4,
+        "category": "DC",
+        "details": "Introducing the Superhero Commando Action Figure - the ultimate companion for thrilling adventures and epic battles!",
+        "seller_name": "asm",
+        "seller_email": "asm@mail.com"
+    },
+    {
+        "name": "Shadow Assassin",
+        "image": "https://i.ibb.co/hDh3H1Z/g-5.jpg",
+        "price": 42,
+        "quantity": "500",
+        "rating": 4,
+        "category": "DC",
+        "details": "Introducing the Superhero Commando Action Figure - the ultimate companion for thrilling adventures and epic battles!",
+        "seller_name": "asm",
+        "seller_email": "asm@mail.com"
+    },
+    {
+        "name": "Atomic Avenger",
+        "image": "https://i.ibb.co/KsYmJxy/g-10.jpg",
+        "price": 42,
+        "quantity": "500",
+        "rating": 4,
+        "category": "DC",
+        "details": "Introducing the Superhero Commando Action Figure - the ultimate companion for thrilling adventures and epic battles!",
+        "seller_name": "asm",
+        "seller_email": "asm@mail.com"
+    }
+   
+]

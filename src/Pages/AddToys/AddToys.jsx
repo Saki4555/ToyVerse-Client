@@ -13,7 +13,7 @@ const AddToys = () => {
         const newToy = { name, image, price: parseInt(price), quantity, rating: parseInt(rating), category, details, seller_name: user?.displayName, seller_email: user?.email };
         console.log(newToy);
 
-        fetch('http://localhost:5000/toys/', {
+        fetch('https://assignment-11-server-iota-five.vercel.app/toys/', {
             method: "POST",
             headers:{
                 'content-type' : 'application/json'

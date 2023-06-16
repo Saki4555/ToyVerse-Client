@@ -25,7 +25,7 @@ const ShopByCategory = () => {
     return (
         <>
             <div data-aos="fade-left" className="pt-20 pb-14 text-center text-gray-600">
-                <h1 className="text-4xl font-bold pb-4">Shop By Category</h1>
+                <h1 className="text-xl lg:text-4xl font-bold pb-4">Shop By Category</h1>
                 <h4>Explore Your Favorite Heros: Shop by Category</h4>
             </div>
             <div className='my-container'>

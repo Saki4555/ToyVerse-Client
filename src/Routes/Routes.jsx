@@ -45,7 +45,7 @@ import ErrorElement from "../Pages/ErrorElement";
         {
           path: '/updatetoys/:id',
           element: <UpdateToys></UpdateToys>,
-          loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({ params }) => fetch(`https://assignment-11-server-iota-five.vercel.app/toys/${params.id}`)
         },
         {
           path: '/alltoys',
@@ -54,7 +54,7 @@ import ErrorElement from "../Pages/ErrorElement";
         {
           path: '/toydetails/:id',
           element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-          loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({ params }) => fetch(`https://assignment-11-server-iota-five.vercel.app/toys/${params.id}`)
         },
         {
           path: '/blogs',

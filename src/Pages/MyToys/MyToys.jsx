@@ -14,7 +14,7 @@ const MyToys = () => {
    const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/mytoys/${user?.email}?toSort=${sortOption}`)
+        fetch(`https://assignment-11-server-iota-five.vercel.app/mytoys/${user?.email}?toSort=${sortOption}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -42,7 +42,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/mytoys/${toy._id}`, {
+                fetch(`https://assignment-11-server-iota-five.vercel.app/mytoys/${toy._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
